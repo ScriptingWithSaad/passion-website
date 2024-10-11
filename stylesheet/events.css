@@ -1,0 +1,56 @@
+h2 {
+    margin-left: 2vw;
+}
+
+/* Events list layout */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.event-card {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.details-btn {
+    background-color: #e44c39;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #e44c39;
+}
+
+.event-details {
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1px;
+    background: #ff5945;
+    color: white;
+}

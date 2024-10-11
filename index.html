@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet/home.css">
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+    <title>Welcome to Our Website | Scripting with Saad</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Website</h1>
+        <nav id="nav" class="nav-hidden">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Welcome to Our Website</h2>
+            <p>Please choose an option:</p>
+            <button onclick="showSignUp()">Sign Up</button>
+            <button onclick="showSignIn()">Sign In</button>
+
+            <div id="form-container" style="display: none;">
+                <form id="sign-up-form" style="display: none;" onsubmit="return signUp(event)">
+                    <h3>Sign Up</h3>
+                    <input type="text" id="signup-email" placeholder="Email (must be @gmail.com)" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <button type="submit">Create Account</button>
+                    <button type="button" onclick="showOptions()">Back</button>
+                    <p id="signup-error-message" style="color: red; display: none;"></p>
+                </form>
+
+                <form id="sign-in-form" style="display: none;" onsubmit="return signIn(event)">
+                    <h3>Sign In</h3>
+                    <input type="text" id="signin-email" placeholder="Email" required>
+                    <input type="password" id="signin-password" placeholder="Password" required>
+                    <button type="submit">Log In</button>
+                    <button type="button" onclick="showOptions()">Back</button>
+                    <p id="error-message" style="color: red; display: none;"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover Your Passion</h2>
+            <p>Join us in exploring a world of opportunities and creativity.</p>
+            <button id="exploreButton">Explore Now</button>
+        </div>
+    </section>
+
+    <section class="overview">
+        <h2>What We Offer</h2>
+        <p>We provide resources, events, and a vibrant community to support your journey in [specific areas or fields].</p>
+    </section>
+
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="./assets/images/dave-lastovskiy-RygIdTavhkQ-unsplash.jpg" alt="Featured Event 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="./assets/images/fireworks-4768501_1280.jpg" alt="Featured Event 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="./assets/images/bus-2429091_1280.jpg" alt="Featured Event 3">
+            </div>
+            <button class="carousel-button prev" id="prevBtn">&#10094;</button>
+            <button class="carousel-button next" id="nextBtn">&#10095;</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ScriptingWithSaad</p>
+    </footer>
+
+    <script src="./script/home.js" defer></script>
+    <script src="./script/script.js" defer></script>
+</body>
+</html>

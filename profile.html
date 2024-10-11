@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | Scripting with Saad</title>
+    <link rel="stylesheet" href="./stylesheet/profile.css">
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="profile-container">
+        <h2>User Profile</h2>
+        <div id="auth-buttons">
+            <button onclick="showSignUpForm()">Sign Up</button>
+            <button onclick="showSignInForm()">Sign In</button>
+        </div>
+        <div id="sign-in-section" style="display: none;">
+            <h3>Sign In</h3>
+            <input type="email" id="signin-email" placeholder="Email" required>
+            <div class="password-container">
+                <input type="password" id="signin-password" placeholder="Password" required>
+            </div>
+            <button onclick="signIn()">Sign In</button>
+            <button onclick="showAuthButtons()">Back</button>
+        </div>
+        <div id="sign-up-section" style="display: none;">
+            <h3>Sign Up</h3>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <div class="password-container">
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <span class="eye-icon" onclick="togglePasswordVisibility('signup-password')">👁️</span>
+            </div>
+            <div class="password-container">
+                <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+                <span class="eye-icon" onclick="togglePasswordVisibility('signup-confirm-password')">👁️</span>
+            </div>
+            <button onclick="signUp()">Sign Up</button>
+            <button onclick="showAuthButtons()">Back</button>
+        </div>
+        <div id="profile-section" style="display: none;">
+            <p><strong>Email:</strong> <span id="user-email"></span></p>
+            <p>
+                <strong>Password:</strong> 
+                <span id="user-password">******</span>
+                <span id="up-eye" onclick="togglePassword()">👁️</span>
+            </p>
+            <button onclick="toggleChangePassword()">Change Password</button>
+            <button onclick="logout()">Logout</button>
+        
+            <div id="change-password-container" style="display: none;">
+                <h3>Change Password</h3>
+                <div class="password-container">
+                    <input type="password" id="new-password" placeholder="New Password" required>
+                    <span class="eye-icon" onclick="togglePasswordVisibility('new-password')">👁️</span>
+                </div>
+                <div class="password-container">
+                    <input type="password" id="confirm-password" placeholder="Confirm New Password" required>
+                    <span class="eye-icon" onclick="togglePasswordVisibility('confirm-password')">👁️</span>
+                </div>
+                <button onclick="changePassword()">Submit</button>
+                <p id="change-password-message" style="display: none;"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/profile.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+</html>

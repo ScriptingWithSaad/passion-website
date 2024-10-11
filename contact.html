@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking external stylesheets for contact and home pages -->
+    <link rel="stylesheet" href="./stylesheet/contact.css">
+    <link rel="stylesheet" href="./stylesheet/home.css">
+    <!-- Favicon for the webpage -->
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+    <title>Contact Us | Scripting with Saad</title>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <!-- Navigation Menu -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>We'd Love to Hear From You!</h2>
+        <!-- Contact form with required fields -->
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Your Age">
+            </div>
+            <div class="form-group">
+                <label for="contactNo">Contact No:</label>
+                <input type="tel" id="contactNo" placeholder="Your Contact Number">
+            </div>
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <input type="text" id="education" placeholder="Your Education">
+            </div>
+            <div class="form-group">
+                <label for="profession">Profession:</label>
+                <input type="text" id="profession" placeholder="Your Profession">
+            </div>
+            <div class="form-group">
+                <label for="source">How did you hear about us?</label>
+                <input type="text" id="source" placeholder="Source">
+            </div>
+            <div class="form-group checkbox-group">
+                <label for="visitAgain">Would you visit again?</label>
+                <input type="checkbox" id="visitAgain"> Yes, I would!
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" placeholder="Your Comments" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 ScriptingWithSaad</p>
+    </footer>
+
+    <!-- Linking JavaScript files -->
+    <script src="js/script.js" defer></script>
+    <script src="./script/script.js" defer></script>
+</body>
+</html>

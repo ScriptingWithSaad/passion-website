@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #edeef0;
+}
+
+header {
+    background: linear-gradient(135deg, #153677, #4e085f);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h2, h3 {
+    color: #153677;
+}
+
+.overview h2, .overview p {
+    text-align: center;
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ff5945;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e44c39;
+}
+
+input {
+    display: block;
+    margin-right: -3vw;
+    width: 90%; /* Adjusted for better mobile view */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5vw;
+    margin-top: 0.5vw;
+}
+
+#error-message, #signup-error-message {
+    color: red;
+    display: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+nav ul li.active a,
+nav ul li a:hover {
+    color: white;
+    border-bottom: 2px solid #ff5945;
+    margin-bottom: 3px;
+}
+
+.hero {
+    position: relative;
+    background-image: url('../assets/images/pexels-airamdphoto-20044390.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+}
+
+.hero-content {
+    background: rgba(155, 155, 155, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    position: relative;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    height: 30vw;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: rgba(97, 97, 97, 0.2);
+    backdrop-filter: blur(80px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.carousel-slide:not(.active) {
+    display: none;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    color: #4e085f;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:hover {
+    background: #4e085f;
+    color: white;
+    transform: scale(1.1);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 1px;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    color: white;
+}

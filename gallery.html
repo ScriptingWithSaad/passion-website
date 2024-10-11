@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet/gallery.css">
+    <link rel="stylesheet" href="./stylesheet/home.css">
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+    <title>Gallery | Scripting with Saad</title>
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Moments</h2>
+        <div class="gallery-grid">
+            <img src="./assets/images/pexels-amirali-beigi-231365-1129039.jpg" alt="Event 1" class="gallery-item">
+            <img src="./assets/images/pexels-dariabuntaria-2324420.jpg" alt="Event 2" class="gallery-item">
+            <img src="./assets/images/pexels-eduardo-romero-817034-1882712.jpg" alt="Event 3" class="gallery-item">
+            <img src="./assets/images/pexels-krivitskiy-1399073.jpg" alt="Event 4" class="gallery-item">
+            <img src="./assets/images/pexels-pixabay-163351.jpg" alt="Event 5" class="gallery-item">
+            <img src="./assets/images/pexels-tima-miroshnichenko-7047000.jpg" alt="Event 6" class="gallery-item">
+        </div>
+
+        <div id="lightbox" class="lightbox hidden">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightboxImg" src="" alt="">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ScriptingWithSaad</p>
+    </footer>
+
+    <script src="./script/gallery.js" defer></script>
+    <script src="./script/script.js" defer></script>
+</body>
+</html>
